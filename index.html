@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Design</title>
+    <style>
+        body{
+            background-color:  #e6e6e6;
+        }
+        #product-main-image{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            display: block;
+            margin: 30px auto;
+        }
+        .images-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .product-image{
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            cursor: pointer;            
+        }
+    </style>
+</head>
+<body>
+    <img src="./Images/1.jpeg" alt="image not found" id="product-main-image"  />
+    <div class="images-container">
+        <img src="./Images/1.jpeg" alt="image not found" class="product-image" onclick="changeImage('1')" />
+        <img src="./Images/2.png" alt="image not found" class="product-image" onclick="changeImage('2')" />
+        <img src="./Images/3.webp" alt="image not found" class="product-image" onclick="changeImage('3')" />
+        <img src="./Images/4.jpeg" alt="image not found" class="product-image" onclick="changeImage('4')" />
+        
+    </div>
+
+    <script>
+        function changeImage(num)
+        {
+            imgElement = document.getElementById('product-main-image');
+            
+            if(num==1)
+            {
+                imgElement.src = "./Images/1.jpeg";
+            }
+            else if(num==2)
+            {
+                imgElement.src = "./Images/2.png";
+            }
+            else if(num==3)
+            {
+                imgElement.src = "./Images/3.webp";
+            }
+            else if(num==4)
+            {
+                imgElement.src = "./Images/4.jpeg";
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
